@@ -572,3 +572,6 @@ grafana.ini:
   alerting:
     enabled: false
 ```
+
+## LICENSE
+Apache-2
