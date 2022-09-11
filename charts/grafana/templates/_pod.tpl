@@ -37,9 +37,9 @@ initContainers:
     volumeMounts:
       - name: storage
         mountPath: "/var/lib/grafana"
-{{- if .Values.persistence.subPath }}
+        {{- if .Values.persistence.subPath }}
         subPath: {{ tpl .Values.persistence.subPath . }}
-{{- end }}
+        {{- end }}
 {{- end }}
 {{- if .Values.dashboards }}
   - name: download-dashboards
@@ -56,19 +56,19 @@ initContainers:
       {{- toYaml . | nindent 6 }}
     {{- end }}
     env:
-{{- range $key, $value := .Values.downloadDashboards.env }}
+      {{- range $key, $value := .Values.downloadDashboards.env }}
       - name: "{{ $key }}"
         value: "{{ $value }}"
-{{- end }}
+      {{- end }}
     {{- with .Values.downloadDashboards.securityContext }}
     securityContext:
       {{- toYaml . | nindent 6 }}
     {{- end }}
-{{- if .Values.downloadDashboards.envFromSecret }}
+    {{- if .Values.downloadDashboards.envFromSecret }}
     envFrom:
       - secretRef:
           name: {{ tpl .Values.downloadDashboards.envFromSecret . }}
-{{- end }}
+    {{- end }}
     volumeMounts:
       - name: config
         mountPath: "/etc/grafana/download_dashboards.sh"
