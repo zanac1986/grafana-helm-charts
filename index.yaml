@@ -3,9 +3,9 @@ entries:
   grafana:
   - apiVersion: v2
     appVersion: 9.3.1
-    created: "2023-01-24T17:41:54.140110151Z"
+    created: "2023-01-25T09:41:56.051643235Z"
     description: The leading tool for querying and visualizing time series and metrics.
-    digest: a9ad7e6b2f0e550be7517225fe551ee5111a5a463680bc7545e54393148c4c80
+    digest: 84d421b1f4e3e762ca0b4373dae91e2b243e3748463aeb2da4b16cc5e4b26ecd
     home: https://grafana.net
     icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
     kubeVersion: ^1.8.0-0
@@ -25,43 +25,43 @@ entries:
     - https://github.com/grafana/grafana
     type: application
     urls:
-    - https://github.com/zanac1986/grafana-helm-charts/releases/download/grafana-6.50.2/grafana-6.50.2.tgz
-    version: 6.50.2
-  grafana-agent-operator:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/grafana-6.50.4/grafana-6.50.4.tgz
+    version: 6.50.4
+  tempo-distributed:
   - apiVersion: v2
-    appVersion: 0.30.2
-    created: "2023-01-24T17:41:54.291700039Z"
-    description: A Helm chart for Grafana Agent Operator
-    digest: 737a4598ba9c62d9c7a8258a44643e79a6b2281c6bac81ee9fbea5eec4f35e66
-    home: https://grafana.com/docs/agent/v0.30/
-    icon: https://raw.githubusercontent.com/grafana/agent/v0.30.2/docs/sources/assets/logo_and_name.png
+    appVersion: 1.5.0
+    created: "2023-01-25T09:41:56.372083214Z"
+    dependencies:
+    - alias: minio
+      condition: minio.enabled
+      name: minio
+      repository: https://helm.min.io/
+      version: 8.0.9
+    - alias: grafana-agent-operator
+      condition: metaMonitoring.grafanaAgent.installOperator
+      name: grafana-agent-operator
+      repository: https://grafana.github.io/helm-charts
+      version: 0.2.2
+    description: Grafana Tempo in MicroService mode
+    digest: e91c371606ee072ade042dbc1db99714fa069c7501d46b0ecfd4f5c58507aa18
+    home: https://grafana.com/docs/tempo/latest/
+    icon: https://raw.githubusercontent.com/grafana/tempo/master/docs/tempo/website/logo_and_name.png
     maintainers:
-    - email: grafana-agent-team@googlegroups.com
-      name: Grafana Agent Team
-    name: grafana-agent-operator
+    - email: number101010@gmail.com
+      name: joe-elliott
+    - email: 9215868@gmail.com
+      name: swartz-k
+    - name: annanay25
+    - name: mdisibio
+    - name: mapno
+    - name: BitProcessor
+    - name: faustodavid
+    - name: zalegrala
+    name: tempo-distributed
     sources:
-    - https://github.com/grafana/agent/tree/v0.30.2/pkg/operator
+    - https://github.com/grafana/tempo
     type: application
     urls:
-    - https://github.com/zanac1986/grafana-helm-charts/releases/download/grafana-agent-operator-0.2.9/grafana-agent-operator-0.2.9.tgz
-    version: 0.2.9
-  loki-distributed:
-  - apiVersion: v2
-    appVersion: 2.7.1
-    created: "2023-01-24T17:41:54.457129236Z"
-    description: Helm chart for Grafana Loki in microservices mode
-    digest: 139289ecf90574c35b56cc7c2b2039061e4c733b44d281853f9e01d3d70961fa
-    home: https://grafana.github.io/helm-charts
-    icon: https://grafana.com/docs/loki/latest/logo_and_name.png
-    maintainers:
-    - name: unguiculus
-    name: loki-distributed
-    sources:
-    - https://github.com/grafana/loki
-    - https://grafana.com/oss/loki/
-    - https://grafana.com/docs/loki/latest/
-    type: application
-    urls:
-    - https://github.com/zanac1986/grafana-helm-charts/releases/download/loki-distributed-0.69.1/loki-distributed-0.69.1.tgz
-    version: 0.69.1
-generated: "2023-01-24T17:41:54.457137936Z"
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/tempo-distributed-0.28.0/tempo-distributed-0.28.0.tgz
+    version: 0.28.0
+generated: "2023-01-25T09:41:56.372101915Z"
