@@ -53,6 +53,43 @@ entries:
           url: https://github.com/grafana/grafana
     apiVersion: v2
     appVersion: 10.1.1
+    created: "2023-09-07T14:08:02.398796098Z"
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 23d0edb13450e6277fa523dd567a76fe93f49b47af8797621cf045df6617b404
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    keywords:
+    - monitoring
+    - metric
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    - https://github.com/grafana/helm-charts
+    type: application
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/grafana-6.59.4/grafana-6.59.4.tgz
+    version: 6.59.4
+  - annotations:
+      artifacthub.io/license: AGPL-3.0-only
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/grafana/helm-charts
+        - name: Upstream Project
+          url: https://github.com/grafana/grafana
+    apiVersion: v2
+    appVersion: 10.1.1
     created: "2023-09-07T13:52:22.759971094Z"
     description: The leading tool for querying and visualizing time series and metrics.
     digest: 2655047a9043a3825f4a3d28d9da55cfa62a97572e8c92c8d43ed44ed3cb998f
@@ -219,6 +256,24 @@ entries:
     - https://github.com/zanac1986/grafana-helm-charts/releases/download/loki-canary-0.13.1/loki-canary-0.13.1.tgz
     version: 0.13.1
   loki-distributed:
+  - apiVersion: v2
+    appVersion: 2.9.0
+    created: "2023-09-07T14:08:02.566435816Z"
+    description: Helm chart for Grafana Loki in microservices mode
+    digest: a8a9b4ac6a60d0eb655fb5a1a84779a26905db2d33b649daeee19d6827fd5f88
+    home: https://grafana.github.io/helm-charts
+    icon: https://grafana.com/docs/loki/latest/logo_and_name.png
+    maintainers:
+    - name: unguiculus
+    name: loki-distributed
+    sources:
+    - https://github.com/grafana/loki
+    - https://grafana.com/oss/loki/
+    - https://grafana.com/docs/loki/latest/
+    type: application
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/loki-distributed-0.73.0/loki-distributed-0.73.0.tgz
+    version: 0.73.0
   - apiVersion: v2
     appVersion: 2.8.4
     created: "2023-09-07T13:06:13.001046001Z"
@@ -535,4 +590,4 @@ entries:
     urls:
     - https://github.com/zanac1986/grafana-helm-charts/releases/download/tempo-vulture-0.4.0/tempo-vulture-0.4.0.tgz
     version: 0.4.0
-generated: "2023-09-07T13:52:22.760007894Z"
+generated: "2023-09-07T14:08:02.566470716Z"
