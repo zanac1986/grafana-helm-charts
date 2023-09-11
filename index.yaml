@@ -1,5 +1,27 @@
 apiVersion: v1
 entries:
+  enterprise-logs:
+  - apiVersion: v2
+    appVersion: v1.5.2
+    created: "2023-09-11T00:42:58.68926884Z"
+    dependencies:
+    - name: loki-distributed
+      repository: https://grafana.github.io/helm-charts
+      version: 0.55.0
+    - alias: minio
+      condition: minio.enabled
+      name: minio
+      repository: https://helm.min.io/
+      version: 8.0.9
+    description: Grafana Enterprise Logs
+    digest: a3874f1357689f9831a8d2deb810f63fd231cfbd93c4f6936118f3c462bd5b82
+    home: https://grafana.com/products/enterprise/logs/
+    kubeVersion: ^1.10.0-0
+    name: enterprise-logs
+    type: application
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/enterprise-logs-2.5.0/enterprise-logs-2.5.0.tgz
+    version: 2.5.0
   enterprise-logs-simple:
   - apiVersion: v2
     appVersion: v1.4.0
@@ -23,6 +45,41 @@ entries:
     urls:
     - https://github.com/zanac1986/grafana-helm-charts/releases/download/enterprise-logs-simple-1.3.0/enterprise-logs-simple-1.3.0.tgz
     version: 1.3.0
+  enterprise-metrics:
+  - apiVersion: v2
+    appVersion: v1.7.0
+    created: "2023-09-11T00:42:58.847499035Z"
+    dependencies:
+    - alias: memcached
+      condition: memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.11
+    - alias: memcached-queries
+      condition: memcached-queries.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.11
+    - alias: memcached-metadata
+      condition: memcached-metadata.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.1.11
+    - alias: minio
+      condition: minio.enabled
+      name: minio
+      repository: https://helm.min.io/
+      version: 8.0.9
+    deprecated: true
+    description: DEPRECATED Grafana Enterprise Metrics
+    digest: 26c19b10572cce793cf0a9bb2a0ce7585b03bfda998f1b431b21748b9811bec3
+    home: https://grafana.com/products/enterprise/metrics
+    icon: https://grafana.com/static/img/menu/metrics-enterprise.svg
+    kubeVersion: ^1.10.0-0
+    name: enterprise-metrics
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/enterprise-metrics-1.10.0/enterprise-metrics-1.10.0.tgz
+    version: 1.10.0
   fluent-bit:
   - apiVersion: v1
     appVersion: v2.1.0
@@ -520,6 +577,42 @@ entries:
   tempo-distributed:
   - apiVersion: v2
     appVersion: 2.2.2
+    created: "2023-09-11T00:42:59.009078179Z"
+    dependencies:
+    - alias: minio
+      condition: minio.enabled
+      name: minio
+      repository: https://helm.min.io/
+      version: 8.0.9
+    - alias: grafana-agent-operator
+      condition: metaMonitoring.grafanaAgent.installOperator
+      name: grafana-agent-operator
+      repository: https://grafana.github.io/helm-charts
+      version: 0.2.2
+    description: Grafana Tempo in MicroService mode
+    digest: 47fe3eb7747c6b68e51c3170daa152a3a16922e1400f8c52fb9286ed1fd29364
+    home: https://grafana.com/docs/tempo/latest/
+    icon: https://raw.githubusercontent.com/grafana/tempo/master/docs/tempo/website/logo_and_name.png
+    maintainers:
+    - email: number101010@gmail.com
+      name: joe-elliott
+    - email: 9215868@gmail.com
+      name: swartz-k
+    - name: annanay25
+    - name: mdisibio
+    - name: mapno
+    - name: BitProcessor
+    - name: faustodavid
+    - name: zalegrala
+    name: tempo-distributed
+    sources:
+    - https://github.com/grafana/tempo
+    type: application
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/tempo-distributed-1.6.4/tempo-distributed-1.6.4.tgz
+    version: 1.6.4
+  - apiVersion: v2
+    appVersion: 2.2.2
     created: "2023-09-07T13:06:14.2256699Z"
     dependencies:
     - alias: minio
@@ -608,4 +701,4 @@ entries:
     urls:
     - https://github.com/zanac1986/grafana-helm-charts/releases/download/tempo-vulture-0.4.0/tempo-vulture-0.4.0.tgz
     version: 0.4.0
-generated: "2023-09-09T15:54:03.895255815Z"
+generated: "2023-09-11T00:42:59.009438484Z"
