@@ -110,6 +110,43 @@ entries:
           url: https://github.com/grafana/grafana
     apiVersion: v2
     appVersion: 10.1.5
+    created: "2023-11-20T22:30:02.650213951Z"
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: a303d12e00195e7de916c147975e4c6f995bd3a4403955df51508c8f1fd4d282
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    keywords:
+    - monitoring
+    - metric
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    - https://github.com/grafana/helm-charts
+    type: application
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/grafana-7.0.8/grafana-7.0.8.tgz
+    version: 7.0.8
+  - annotations:
+      artifacthub.io/license: AGPL-3.0-only
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/grafana/helm-charts
+        - name: Upstream Project
+          url: https://github.com/grafana/grafana
+    apiVersion: v2
+    appVersion: 10.1.5
     created: "2023-11-01T19:29:37.238011394Z"
     description: The leading tool for querying and visualizing time series and metrics.
     digest: 9146fa4314e007b8691b93e8f8f60b5afbdd64e9902163d31ddf78878aba6505
@@ -387,6 +424,23 @@ entries:
     - https://github.com/zanac1986/grafana-helm-charts/releases/download/grafana-6.56.1/grafana-6.56.1.tgz
     version: 6.56.1
   grafana-agent-operator:
+  - apiVersion: v2
+    appVersion: 0.37.4
+    created: "2023-11-20T22:30:02.785282241Z"
+    description: A Helm chart for Grafana Agent Operator
+    digest: a5c4d15b81b1397bcae3a0753cd38d5c1a723f76f5dd279c3a937986275e3272
+    home: https://grafana.com/docs/agent/v0.37/
+    icon: https://raw.githubusercontent.com/grafana/agent/v0.37.4/docs/sources/assets/logo_and_name.png
+    maintainers:
+    - email: grafana-agent-team@googlegroups.com
+      name: Grafana Agent Team
+    name: grafana-agent-operator
+    sources:
+    - https://github.com/grafana/agent/tree/v0.37.4/pkg/operator
+    type: application
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/grafana-agent-operator-0.3.10/grafana-agent-operator-0.3.10.tgz
+    version: 0.3.10
   - apiVersion: v2
     appVersion: 0.37.3
     created: "2023-11-01T19:29:37.443986459Z"
@@ -790,6 +844,18 @@ entries:
     version: 6.11.0
   rollout-operator:
   - apiVersion: v2
+    appVersion: v0.9.0
+    created: "2023-11-20T22:30:02.904811965Z"
+    description: Grafana rollout-operator
+    digest: 1f430f5ce04e6056fa43bcccb2e4c96ea4c79f5fcc04cd124050fad8fc982237
+    home: https://github.com/grafana/rollout-operator
+    kubeVersion: ^1.10.0-0
+    name: rollout-operator
+    type: application
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/rollout-operator-0.10.0/rollout-operator-0.10.0.tgz
+    version: 0.10.0
+  - apiVersion: v2
     appVersion: v0.8.1
     created: "2023-09-23T15:32:13.384971182Z"
     description: Grafana rollout-operator
@@ -853,6 +919,29 @@ entries:
     - https://github.com/zanac1986/grafana-helm-charts/releases/download/synthetic-monitoring-agent-0.2.0/synthetic-monitoring-agent-0.2.0.tgz
     version: 0.2.0
   tempo:
+  - apiVersion: v2
+    appVersion: 2.3.0
+    created: "2023-11-20T22:30:03.069001629Z"
+    description: Grafana Tempo Single Binary Mode
+    digest: a632045b1ca1e8919d46a7c58d26a4c2eb80a6eec2405ed59ab7138c5045781d
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/tempo/master/docs/tempo/website/logo_and_name.png
+    maintainers:
+    - email: number101010@gmail.com
+      name: joe-elliott
+    - email: 9215868@gmail.com
+      name: swartz-k
+    - name: annanay25
+    - name: mdisibio
+    - name: dgzlopes
+    - name: mapno
+    name: tempo
+    sources:
+    - https://github.com/grafana/tempo
+    type: application
+    urls:
+    - https://github.com/zanac1986/grafana-helm-charts/releases/download/tempo-1.7.1/tempo-1.7.1.tgz
+    version: 1.7.1
   - apiVersion: v2
     appVersion: 2.3.0
     created: "2023-11-01T19:29:38.584753017Z"
@@ -1138,4 +1227,4 @@ entries:
     urls:
     - https://github.com/zanac1986/grafana-helm-charts/releases/download/tempo-vulture-0.4.0/tempo-vulture-0.4.0.tgz
     version: 0.4.0
-generated: "2023-11-01T19:29:39.036993202Z"
+generated: "2023-11-20T22:30:03.069137391Z"
